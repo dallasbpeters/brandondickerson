@@ -1,16 +1,29 @@
+// Get variable from environment file
+require("dotenv").config({
+  path: `.env`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Brandon Dickerson`,
+    description: `Website for writer, speaker, and filmmaker Brandon Dickerson.`,
+    author: `Dallas Peters`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-prismic`,
+      options: {
+        repositoryName: process.env.PRISMIC_REPOSITORY_NAME,
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+      },
+    },
+    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `static`,
+        path: `${__dirname}/src/static`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -18,13 +31,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `brandondickerson`,
+        short_name: `brandon`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/static/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

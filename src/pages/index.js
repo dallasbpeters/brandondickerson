@@ -1,21 +1,41 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Project from "../components/project/project"
 
-const IndexPage = () => (
+const IndexPage = props => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    {props.data.projects.edges.map(projects => (
+      <Project slug={projects.node.slugs[0]} data={projects.node.data} />
+    ))}
   </Layout>
 )
 
 export default IndexPage
+
+export const IndexQuery = graphql`
+  query Projects {
+    projects: allPrismicProjects {
+      edges {
+        node {
+          slugs
+          uid
+          data {
+            date(formatString: "MMMMM DD, YYYY")
+            title {
+              text
+            }
+            thumbnail {
+              alt
+              copyright
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+`
