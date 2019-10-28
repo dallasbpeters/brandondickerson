@@ -17,6 +17,23 @@ module.exports = {
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `work sans\:400,500,700`, // you can also specify font weights and styles
+        ],
+        display: "swap",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: `${__dirname}/src/static/svg`,
+        },
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
