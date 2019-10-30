@@ -1,0 +1,14 @@
+@import "../../scss/variables";
+
+.site-footer {
+  background-color: $grey;
+  padding: 48px;
+  text-align: center;
+  a {
+    color: $black;
+  }
+}
+
+.btn-row {
+  margin: 48px 0;
+}
