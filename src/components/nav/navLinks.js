@@ -24,7 +24,7 @@ const NavLinks = () => (
     </Link>
     <Link
       to="/work-with-me"
-      className="site-nav--link"
+      className="site-nav--link site-nav--link__button"
       activeClassName="active"
     >
       Work With Me

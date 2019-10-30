@@ -3,11 +3,9 @@ import React from "react"
 import "../project/project.scss"
 
 const Project = props => (
-  <React.Fragment>
-    <h2>{props.data.title.text}</h2>
-    <p>{props.date}</p>
+  <div className="project-group--project">
     <img src={props.data.thumbnail.url} alt={props.data.thumbnail.alt} />
-  </React.Fragment>
+  </div>
 )
 
 export default Project

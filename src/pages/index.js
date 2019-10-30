@@ -8,9 +8,11 @@ import Project from "../components/project/project"
 const IndexPage = props => (
   <Layout>
     <SEO title="Home" />
-    {props.data.projects.edges.map(projects => (
-      <Project slug={projects.node.slugs[0]} data={projects.node.data} />
-    ))}
+    <div className="project-group">
+      {props.data.projects.edges.map(projects => (
+        <Project slug={projects.node.slugs[0]} data={projects.node.data} />
+      ))}
+    </div>
   </Layout>
 )
 
@@ -24,7 +26,7 @@ export const IndexQuery = graphql`
           slugs
           uid
           data {
-            date(formatString: "MMMMM DD, YYYY")
+            # date(formatString: "MMMMM DD, YYYY")
             title {
               text
             }
