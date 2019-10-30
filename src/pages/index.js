@@ -30,6 +30,9 @@ export const IndexQuery = graphql`
             title {
               text
             }
+            embed_link {
+              embed_url
+            }
             thumbnail {
               alt
               copyright
