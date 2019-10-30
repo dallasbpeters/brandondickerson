@@ -4,10 +4,15 @@
   display: flex;
   flex-wrap: wrap;
   &--project {
-    flex-grow: 1;
     width: 50%;
+    cursor: pointer;
+    filter: grayscale(1);
+    transition: filter 300ms linear;
+    &:hover {
+      filter: grayscale(0);
+    }
     @include md {
-      width: 33.33333%;
+      width: 25%;
     }
     img {
       margin: 0;
