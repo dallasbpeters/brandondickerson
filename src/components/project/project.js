@@ -5,7 +5,6 @@ import "../project/project.scss"
 
 const Project = props => (
   <React.Fragment>
-    {/* <img src={props.data.thumbnail.url} alt={props.data.thumbnail.alt} /> */}
     <VideoLightbox
       className="project-group--project"
       type="youtube"

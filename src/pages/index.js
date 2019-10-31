@@ -24,18 +24,11 @@ export const IndexQuery = graphql`
       edges {
         node {
           slugs
-          uid
           data {
-            # date(formatString: "MMMMM DD, YYYY")
-            title {
-              text
-            }
             embed_link {
               embed_url
             }
             thumbnail {
-              alt
-              copyright
               url
             }
           }
