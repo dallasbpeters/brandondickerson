@@ -11,7 +11,7 @@
     padding: 72px;
   }
   &--spiral-logo {
-    margin: 0 auto 24px auto;
+    margin: 0 auto;
   }
 
   &--posters-container {
@@ -22,6 +22,7 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    padding: 24px;
   }
 
   &--poster {
@@ -31,16 +32,16 @@
     cursor: pointer;
     transition: all 200ms ease-in-out;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-    &:first-child {
-      margin-left: 48px;
+    &:last-child {
+      padding-right: 24px;
     }
     @include lg {
       filter: grayscale(1);
     }
     &:hover {
-      transform: scale(1.1);
-      box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.8),
-        16px 12px 36px rgba(0, 0, 0, 0.5);
+      transform: scale(1.05);
+      box-shadow: 2px 3px 16px rgba(0, 0, 0, 0.6),
+        12px 8px 26px rgba(0, 0, 0, 0.2);
       filter: grayscale(0);
     }
     img {
@@ -53,7 +54,6 @@
   &--provider-logos-container {
     display: flex;
     flex-direction: row;
-    margin-top: 24px;
     .gatsby-image-wrapper {
       margin: 12px;
     }
