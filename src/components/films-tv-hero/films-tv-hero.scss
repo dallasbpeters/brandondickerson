@@ -23,6 +23,9 @@
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     padding: 24px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &--poster {
