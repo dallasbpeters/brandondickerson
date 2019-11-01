@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
-
+import VideoLightbox from "react-bigpicture"
 import "../../components/films-tv-hero/films-tv-hero.scss"
 
 const renderFilms = data => {
@@ -12,18 +12,44 @@ const renderFilms = data => {
         fixed={data.logoSpiral.childImageSharp.fixed}
       />
       <div className="films-tv-hero--posters-container">
-        {data.allPrismicFilm.edges.map(({ node }) => (
-          <img
-            src={node.data.poster.url}
-            key={node.uid}
-            alt={node.data.poster.alt}
-          />
-        ))}
+        <div className="films-tv-hero--scrollable-flex">
+          {data.allPrismicFilm.edges.map(({ node }) => (
+            <VideoLightbox
+              className="films-tv-hero--poster"
+              type="youtube"
+              src={node.data.embed_link.embed_url}
+            >
+              <img
+                src={node.data.poster.url}
+                key={node.uid}
+                alt={node.data.poster.alt}
+              />
+            </VideoLightbox>
+          ))}
+        </div>
       </div>
       <div className="films-tv-hero--provider-logos-container">
-        <Img fixed={data.logoNetflix.childImageSharp.fixed} />
-        <Img fixed={data.logoPrime.childImageSharp.fixed} />
-        <Img fixed={data.logoItunes.childImageSharp.fixed} />
+        <a
+          href="http://bit.ly/DickersonNetflix"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Img fixed={data.logoNetflix.childImageSharp.fixed} />
+        </a>
+        <a
+          href="http://bit.ly/DickersonAmazon"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Img fixed={data.logoPrime.childImageSharp.fixed} />
+        </a>
+        <a
+          href="http://bit.ly/DickersonITUNES"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Img fixed={data.logoItunes.childImageSharp.fixed} />
+        </a>
       </div>
     </div>
   )
@@ -40,7 +66,7 @@ const FilmsTvHero = () => {
 export const spiralImage = graphql`
   fragment spiralImage on File {
     childImageSharp {
-      fixed(width: 220) {
+      fixed(width: 200) {
         ...GatsbyImageSharpFixed
       }
     }
@@ -50,7 +76,7 @@ export const spiralImage = graphql`
 export const providerImage = graphql`
   fragment providerImage on File {
     childImageSharp {
-      fixed(width: 130) {
+      fixed(width: 100) {
         ...GatsbyImageSharpFixed
       }
     }
