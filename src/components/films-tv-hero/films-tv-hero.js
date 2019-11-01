@@ -12,21 +12,23 @@ const renderFilms = data => {
         fixed={data.logoSpiral.childImageSharp.fixed}
       />
       <div className="films-tv-hero--posters-container">
-        <div className="films-tv-hero--scrollable-flex">
-          {data.allPrismicFilm.edges.map(({ node }) => (
-            <VideoLightbox
-              className="films-tv-hero--poster"
-              type="youtube"
-              src={node.data.embed_link.embed_url}
-            >
-              <img
-                src={node.data.poster.url}
-                key={node.uid}
-                alt={node.data.poster.alt}
-              />
-            </VideoLightbox>
-          ))}
-        </div>
+        {typeof window !== "undefined" ? (
+          <div className="films-tv-hero--scrollable-flex">
+            {data.allPrismicFilm.edges.map(({ node }) => (
+              <VideoLightbox
+                className="films-tv-hero--poster"
+                type="youtube"
+                src={node.data.embed_link.embed_url}
+              >
+                <img
+                  src={node.data.poster.url}
+                  key={node.uid}
+                  alt={node.data.poster.alt}
+                />
+              </VideoLightbox>
+            ))}
+          </div>
+        ) : null}
       </div>
       <div className="films-tv-hero--provider-logos-container">
         <a
