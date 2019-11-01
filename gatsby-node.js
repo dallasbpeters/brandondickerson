@@ -4,19 +4,21 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-exports.onCreateWebpackConfig = ({ stage, rules, loaders, actions }) => {
-  switch (stage) {
-    case "build-html":
-      actions.setWebpackConfig({
-        module: {
-          rules: [
-            {
-              test: /react-bigpicture/,
-              use: [loaders.null()],
-            },
-          ],
-        },
-      })
-      break
-  }
-}
+// https://tinaja.computer/2019/06/20/leaflet-in-gatsby.html
+
+// exports.onCreateWebpackConfig = ({ stage, rules, loaders, actions }) => {
+//   switch (stage) {
+//     case "build-html":
+//       actions.setWebpackConfig({
+//         module: {
+//           rules: [
+//             {
+//               test: /react-bigpicture/,
+//               use: [loaders.null()],
+//             },
+//           ],
+//         },
+//       })
+//       break
+//   }
+// }
