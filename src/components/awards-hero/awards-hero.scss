@@ -1,0 +1,20 @@
+@import "../../scss/breakpoints";
+
+.awards-hero {
+  padding: 24px;
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  @include md {
+    padding: 48px;
+  }
+  @include lg {
+    padding: 72px;
+  }
+}
+img {
+  display: block;
+  max-height: 360px;
+  margin: 12px;
+}
