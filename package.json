@@ -1,10 +1,11 @@
 {
   "name": "brandondickerson",
-  "private": true,
+  "private": false,
   "description": "Site files for Gatsby, Prismic, Netlify setup.",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "author": "Dallas Peters",
   "dependencies": {
+    "bigpicture": "^2.2.1",
     "gatsby": "^2.17.4",
     "gatsby-image": "^2.2.29",
     "gatsby-plugin-google-fonts": "^1.0.1",
@@ -20,7 +21,6 @@
     "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
-    "react-bigpicture": "^1.0.26",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1"
   },

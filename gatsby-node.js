@@ -13,7 +13,7 @@
 //         module: {
 //           rules: [
 //             {
-//               test: /react-bigpicture/,
+//               test: /bigpicture/,
 //               use: [loaders.null()],
 //             },
 //           ],

@@ -2179,7 +2179,7 @@ big.js@^5.2.2:
   resolved "https://registry.yarnpkg.com/big.js/-/big.js-5.2.2.tgz#65f0af382f578bcdc742bd9c281e9cb2d7768328"
   integrity sha512-vyL2OymJxmarO8gxMr0mhChsO9QGwhynfuu4+MHTAW6czfq9humCB7rKpUjDd9YUiDPU4mzpyupFSvOClAwbmQ==
 
-bigpicture@^2.1.3:
+bigpicture@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/bigpicture/-/bigpicture-2.2.1.tgz#c65d3dbd9521f83b26919db92a120622faf79a62"
   integrity sha512-+P+UYSi9nVB6xvWORowjX2+s6TbB2oo/eT2dtn4vFQB1322AmX58pxS1B26TK/7CQRHzFwqva+T/X3p4kosOAQ==
@@ -9765,7 +9765,7 @@ prompts@^2.2.1:
     kleur "^3.0.3"
     sisteransi "^1.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -9981,16 +9981,6 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-bigpicture@^1.0.26:
-  version "1.0.26"
-  resolved "https://registry.yarnpkg.com/react-bigpicture/-/react-bigpicture-1.0.26.tgz#22dd76c1dfd2e261ab9856b0824b6921911f9d24"
-  integrity sha512-GNYao/rcGFUP4nDHTjswKh67NGaVvRTe5+fLF4fahYbCwS/umS3B8+qTS/DXi9XBVG5aLe+4AyQokyJCog8ydA==
-  dependencies:
-    bigpicture "^2.1.3"
-    prop-types "^15.5.8"
-    react "^16.8.6"
-    react-dom "^16.8.6"
-
 react-dev-utils@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-4.2.3.tgz#5b42d9ea58d5e9e017a2f57a40a8af408a3a46fb"
@@ -10015,7 +10005,7 @@ react-dev-utils@^4.2.3:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@^16.11.0, react-dom@^16.8.6:
+react-dom@^16.11.0:
   version "16.11.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.11.0.tgz#7e7c4a5a85a569d565c2462f5d345da2dd849af5"
   integrity sha512-nrRyIUE1e7j8PaXSPtyRKtz+2y9ubW/ghNgqKFHHAHaeP0fpF5uXR+sq8IMRHC+ZUxw7W9NyCDTBtwWxvkb0iA==
@@ -10086,7 +10076,7 @@ react-side-effect@^1.1.0:
   dependencies:
     shallowequal "^1.0.1"
 
-react@^16.10.2, react@^16.11.0, react@^16.8.6:
+react@^16.10.2, react@^16.11.0:
   version "16.11.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.11.0.tgz#d294545fe62299ccee83363599bf904e4a07fdbb"
   integrity sha512-M5Y8yITaLmU0ynd0r1Yvfq98Rmll6q8AxaEe88c8e7LxO8fZ2cNgmFt0aGAS9wzf1Ao32NKXtCl+/tVVtkxq6g==
