@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import VideoLightbox from "react-bigpicture"
+import BigPictureWrapper from "../bigpicture/BigPictureWrapper.js"
 import "../../components/films-tv-hero/films-tv-hero.scss"
 
 const renderFilms = data => {
@@ -14,7 +14,7 @@ const renderFilms = data => {
       <div className="films-tv-hero--posters-container">
         <div className="films-tv-hero--scrollable-flex">
           {data.allPrismicFilm.edges.map(({ node }) => (
-            <VideoLightbox
+            <BigPictureWrapper
               className="films-tv-hero--poster"
               type="youtube"
               src={node.data.embed_link.embed_url}
@@ -24,7 +24,7 @@ const renderFilms = data => {
                 key={node.uid}
                 alt={node.data.poster.alt}
               />
-            </VideoLightbox>
+            </BigPictureWrapper>
           ))}
         </div>
       </div>

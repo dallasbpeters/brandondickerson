@@ -1,17 +1,17 @@
 import React from "react"
 
-import VideoLightbox from "react-bigpicture"
+import BigPictureWrapper from "../bigpicture/BigPictureWrapper.js"
 import "../project/project.scss"
 
 const Project = props => (
   <React.Fragment>
-    <VideoLightbox
+    <BigPictureWrapper
       className="project-group--project"
       type="youtube"
       src={props.data.embed_link.embed_url}
     >
       <img src={props.data.thumbnail.url} alt={props.data.thumbnail.alt} />
-    </VideoLightbox>
+    </BigPictureWrapper>
   </React.Fragment>
 )
 
