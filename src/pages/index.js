@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Project from "../components/project/project"
+import HomepageHero from "../components/homepage-hero/homepage-hero"
 
 const IndexPage = props => (
   <Layout>
@@ -13,6 +14,7 @@ const IndexPage = props => (
         <Project slug={projects.node.slugs[0]} data={projects.node.data} />
       ))}
     </div>
+    <HomepageHero />
   </Layout>
 )
 
