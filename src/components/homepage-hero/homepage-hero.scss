@@ -1,0 +1,31 @@
+@import "../../scss/variables";
+@import "../../scss/breakpoints";
+
+.homepage-hero {
+  background-color: $black;
+  color: white;
+  padding-top: 24px;
+  @include md {
+    padding-top: 72px;
+  }
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    @include md {
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+  }
+  &__text-wrapper {
+    text-align: center;
+    padding: 24px 24px 0 24px;
+    @include md {
+      text-align: left;
+    }
+  }
+  img {
+    margin: 0;
+  }
+}
