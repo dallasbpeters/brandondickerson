@@ -1,0 +1,19 @@
+.section--logo {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 72px 0;
+  h1 {
+    text-align: center;
+  }
+}
+.logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  .logo-grid__container {
+    padding: 12px;
+    flex-basis: 150px;
+    max-width: 150px;
+  }
+}
