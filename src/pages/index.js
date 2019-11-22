@@ -27,11 +27,27 @@ export const IndexQuery = graphql`
         node {
           slugs
           data {
+            project_type {
+              document {
+                data {
+                  name
+                }
+              }
+            }
+            title {
+              text
+            }
             embed_link {
               embed_url
             }
             thumbnail {
-              url
+              localFile {
+                childImageSharp {
+                  fluid(quality: 100, maxWidth: 420) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
           }
         }
