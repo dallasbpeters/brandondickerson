@@ -3,6 +3,7 @@
 .project-group {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
   &--project {
     width: 50%;
     cursor: pointer;
@@ -14,9 +15,51 @@
     @include md {
       width: 25%;
     }
+    &:after {
+      content: attr(data-title);
+      position: fixed;
+    }
     img {
       margin: 0;
       display: block;
     }
+  }
+}
+
+.project-group--project-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  position: absolute;
+  padding: 24px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  transition: opacity 200ms ease-in-out;
+  .project-meta__title {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+  }
+  .project-meta__type {
+    font-size: 13px;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin: 0;
+  }
+}
+
+.project-group--project:hover {
+  .project-group--project-meta {
+    opacity: 1;
   }
 }
