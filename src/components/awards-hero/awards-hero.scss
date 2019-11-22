@@ -2,8 +2,6 @@
 
 .awards-hero {
   padding: 24px;
-  display: flex;
-  justify-content: space-around;
   max-width: 1200px;
   margin: 0 auto;
   @include md {
@@ -12,9 +10,17 @@
   @include lg {
     padding: 72px;
   }
-  img {
-    display: block;
-    max-height: 360px;
-    margin: 12px;
+  &__awards-images {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 48px;
+    img {
+      display: block;
+      max-height: 360px;
+      margin: 12px;
+    }
+  }
+  &__awards-text {
+    text-align: center;
   }
 }

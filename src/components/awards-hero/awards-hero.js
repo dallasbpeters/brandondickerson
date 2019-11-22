@@ -5,13 +5,22 @@ import "../../components/awards-hero/awards-hero.scss"
 const renderAwards = data => {
   return (
     <div className="awards-hero">
-      {data.allPrismicAward.edges.map(({ node }) => (
-        <img
-          src={node.data.award_image.url}
-          key={node.uid}
-          alt={node.data.award_image.alt}
-        />
-      ))}
+      <div className="awards-hero__awards-images">
+        {data.allPrismicAward.edges.map(({ node }) => (
+          <img
+            src={node.data.award_image.url}
+            key={node.uid}
+            alt={node.data.award_image.alt}
+          />
+        ))}
+      </div>
+      <div className="awards-hero__awards-text">
+        <h1>
+          blah blah the highest awards in advertising including the coveted
+          Cannes Gold Lion...
+        </h1>
+        <p>Then a paragraph to support the headline above it.</p>
+      </div>
     </div>
   )
 }

@@ -1,4 +1,5 @@
 @import "../../scss/breakpoints";
+@import "../../scss/variables";
 
 .site-header {
   display: flex;
@@ -15,7 +16,7 @@
     font-weight: 600;
     letter-spacing: -0.02em;
     a {
-      color: black;
+      color: $black;
       text-decoration: none;
     }
   }
@@ -49,7 +50,7 @@
   }
 
   &--link {
-    color: black;
+    color: $black;
     text-decoration: underline;
     text-decoration-thickness: 6px;
     text-decoration-color: transparent;
@@ -66,21 +67,21 @@
     }
     &.active {
       text-decoration: underline;
-      text-decoration-thickness: 8px;
-      text-decoration-color: grey;
+      text-decoration-thickness: 4px;
+      text-decoration-color: $black;
       text-decoration-skip-ink: none;
       text-underline-offset: 8px;
     }
     &:hover {
       text-decoration: underline;
-      text-decoration-thickness: 4px;
-      text-decoration-color: grey;
+      text-decoration-thickness: 8px;
+      text-decoration-color: $black;
       text-decoration-skip-ink: none;
       text-underline-offset: 8px;
     }
     &__button {
       text-decoration: none !important;
-      border: solid 4px black;
+      border: solid 4px $black;
       padding: 8px 12px;
       text-align: center;
     }
