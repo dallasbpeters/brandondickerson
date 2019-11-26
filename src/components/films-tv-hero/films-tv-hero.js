@@ -16,7 +16,7 @@ const renderFilms = data => {
           {data.allPrismicFilm.edges.map(({ node }) => (
             <BigPictureWrapper
               className="films-tv-hero--poster"
-              type="youtube"
+              type="vimeo"
               src={node.data.embed_link.embed_url}
             >
               <img
