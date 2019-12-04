@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
@@ -8,7 +8,7 @@ const SamaIndexPage = props => (
   <Layout>
     <SEO title="Stories About My Ass" />
     {props.data.posts.edges.map(posts => (
-      <p>{posts.node.data.title.text}</p>
+      <Link to={`/sama/${posts.node.uid}`}>{posts.node.data.title.text}</Link>
     ))}
   </Layout>
 )
@@ -20,6 +20,8 @@ export const SamaQuery = graphql`
     posts: allPrismicSama {
       edges {
         node {
+          id
+          uid
           data {
             title {
               text

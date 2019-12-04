@@ -4,21 +4,33 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// https://tinaja.computer/2019/06/20/leaflet-in-gatsby.html
+const path = require("path")
 
-// exports.onCreateWebpackConfig = ({ stage, rules, loaders, actions }) => {
-//   switch (stage) {
-//     case "build-html":
-//       actions.setWebpackConfig({
-//         module: {
-//           rules: [
-//             {
-//               test: /bigpicture/,
-//               use: [loaders.null()],
-//             },
-//           ],
-//         },
-//       })
-//       break
-//   }
-// }
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  const pages = await graphql(`
+    {
+      allPrismicSama {
+        edges {
+          node {
+            id
+            uid
+          }
+        }
+      }
+    }
+  `)
+
+  const template = path.resolve("src/templates/sama-post.jsx")
+
+  pages.data.allPrismicSama.edges.forEach(edge => {
+    createPage({
+      path: `/sama/${edge.node.uid}`,
+      component: template,
+      context: {
+        uid: edge.node.uid,
+      },
+    })
+  })
+}
