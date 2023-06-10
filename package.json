@@ -6,7 +6,7 @@
   "author": "Dallas Peters",
   "dependencies": {
     "bigpicture": "^2.2.1",
-    "gatsby": "^2.17.4",
+    "gatsby": "^4.25.7",
     "gatsby-cli": "^2.8.14",
     "gatsby-image": "^2.2.29",
     "gatsby-plugin-google-fonts": "^1.0.1",
